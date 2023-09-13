@@ -1,0 +1,141 @@
+<div class="contenedor">
+    <div>
+        <!-- tabla de regiones -->
+        <form class="example-form">
+
+
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td><mat-form-field class="example-full-width">
+                            <mat-label>Nombre de la región</mat-label>
+                            <input [(ngModel)]="nombre" [ngModelOptions]="{standalone: true}" matInput>
+                        </mat-form-field></td>
+                    <td>
+                        <button mat-raised-button color="primary" (click)="buscarRegion()">Buscar</button>
+        
+                    </td>
+                    <td>
+                        <h4 class="error">{{miError}}</h4>
+        
+                    </td>
+                </tr>
+            </table>
+        
+        
+        
+        </form>
+        
+        
+        <table class="example-full-width" cellspacing="0">
+            
+            <tr>
+                <div class="row">
+                    <div class="table-container">
+                        <h2>Regiones</h2>
+                        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="demo-name">
+                                <th mat-header-cell *matHeaderCellDef> nombre </th>
+                                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                            </ng-container>
+        
+                            <!-- Name Column -->
+                            <ng-container matColumnDef="demo-url">
+                                <th mat-header-cell *matHeaderCellDef> URL </th>
+                                <td mat-cell *matCellDef="let element"> <a [href]="element.url"
+                                        target="_blank">{{element.url}}</a> </td>
+                            </ng-container>
+        
+        
+        
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    </div>
+        
+                </div>
+            </tr>
+        </table>
+        
+    </div>
+</div>
+<div class="contenedor">
+    <div>
+        <!-- tabla de pokemon -->
+        <form class="example-form">
+
+
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td><mat-form-field class="example-full-width">
+                        <mat-label>Nombre Pokemon</mat-label>
+                        <input [(ngModel)]="pokemonNombre" [ngModelOptions]="{standalone: true}" matInput>
+                    </mat-form-field></td>
+                <td>
+                    <button mat-raised-button color="primary" (click)="getPokemon()">Buscar</button>
+        
+                </td>
+                <td>
+                    <h4 class="error">{{errorPokemon}}</h4>
+    
+                </td>
+                </tr>
+            </table>
+        
+        
+        
+        </form>
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <div class="row">
+                    <div class="table-container">
+                        <h2>Habilidades</h2>
+                        <table mat-table [dataSource]="dataSourceHabilidades" class="mat-elevation-z8 demo-table">
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="demo-name">
+                                <th mat-header-cell *matHeaderCellDef> nombre </th>
+                                <td mat-cell *matCellDef="let element"> {{element.ability.name}} </td>
+                            </ng-container>
+        
+                            <!-- Name Column -->
+                            <ng-container matColumnDef="demo-url">
+                                <th mat-header-cell *matHeaderCellDef> URL </th>
+                                <td mat-cell *matCellDef="let element"> <a [href]="element.ability.url"
+                                        target="_blank">{{element.ability.url}}</a> </td>
+                            </ng-container>
+        
+        
+        
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    </div>
+        
+                    <div class="table-container">
+                        <h2>Tipos</h2>
+                        <table mat-table [dataSource]="dataSourceTipos" class="mat-elevation-z8 demo-table">
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="demo-name">
+                                <th mat-header-cell *matHeaderCellDef> nombre </th>
+                                <td mat-cell *matCellDef="let element"> {{element.type.name}} </td>
+                            </ng-container>
+        
+                            <!-- Name Column -->
+                            <ng-container matColumnDef="demo-url">
+                                <th mat-header-cell *matHeaderCellDef> URL </th>
+                                <td mat-cell *matCellDef="let element"> <a [href]="element.type.url"
+                                        target="_blank">{{element.type.url}}</a> </td>
+                            </ng-container>
+        
+        
+        
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    </div>
+                </div>
+            </tr>
+        </table>
+
+    </div>
+</div>

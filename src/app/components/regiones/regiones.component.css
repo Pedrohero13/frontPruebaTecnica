@@ -1,0 +1,55 @@
+.demo-table {
+    width: 100%;
+  }
+  
+.mat-column-demo-position {
+width: 32px;
+border-right: 1px solid currentColor;
+padding-right: 24px;
+text-align: center;
+}
+
+.mat-column-demo-name {
+padding-left: 16px;
+font-size: 20px;
+}
+
+.mat-column-demo-weight {
+font-style: italic;
+}
+
+.mat-column-demo-symbol {
+width: 32px;
+text-align: center;
+font-weight: bold;
+}
+
+.error{
+    color: red;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para la clase "table-container" */
+  .table-container {
+    flex: 1;
+    margin-right: 10px; /* Espacio entre las tablas */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .ajustar-contenido {
+    width: auto;
+  }
+
+  .contenedor{
+    display:flex;
+    justify-content:center;
+}
